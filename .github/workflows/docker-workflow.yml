@@ -21,7 +21,7 @@ jobs:
       - name: Variables
         id: vars
         run: |
-          ghostscript_version=$(grep '^GHOSTSCRIPT_VERSION' Makefile | sed 's/.*=//')
+          ghostscript_version=$(grep '^GHOSTSCRIPT_VERSION=' Makefile | sed 's/.*=//')
           echo "ghostscript_version=$ghostscript_version"
           echo "ghostscript_version=$ghostscript_version" >> $GITHUB_OUTPUT
       - name: Build
