@@ -6,11 +6,10 @@ COPY Makefile ./
 
 RUN make all
 
-# RUN mkdir /dist && \
-#  echo "cp /build/dist/sharp-layer.zip /dist/sharp-layer.zip" > /entrypoint.sh && \
-#  chmod +x /entrypoint.sh
+RUN zip -r /build/ghostscript-layer.zip /build/bin /build/share
 
-RUN ls -la /build
-RUN ls -la /build/ghostscript-10.01.1
+RUN mkdir /dist && \
+ echo "cp /build/ghostscript-layer.zip /dist/ghostscript-layer.zip" > /entrypoint.sh && \
+ chmod +x /entrypoint.sh
 
-# ENTRYPOINT "/entrypoint.sh"
+ENTRYPOINT "/entrypoint.sh"
