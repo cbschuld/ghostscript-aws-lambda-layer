@@ -11,6 +11,6 @@ RUN make all
 #  chmod +x /entrypoint.sh
 
 RUN ls -la /build
-RUN ls -la /build/dist
+RUN ls -la /build/ghostscript-10.01.1
 
 # ENTRYPOINT "/entrypoint.sh"

@@ -1,6 +1,6 @@
 # what to tell Ghostscript where it will expect to run from
 
-TARGET_DIR ?= /opt/
+TARGET_DIR ?= /build/
 
 
 .ONESHELL:
