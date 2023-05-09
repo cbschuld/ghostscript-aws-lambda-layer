@@ -4,9 +4,15 @@ WORKDIR /build
 
 COPY Makefile ./
 
+RUN yum update -y
+RUN yum groupinstall -y "Development Tools"
+
 RUN make all
 
-RUN zip -r /build/ghostscript-layer.zip /build/bin /build/share
+WORKDIR /build
+
+# archive with symbolic links
+RUN zip -ry ghostscript-layer.zip bin share
 
 RUN mkdir /dist && \
  echo "cp /build/ghostscript-layer.zip /dist/ghostscript-layer.zip" > /entrypoint.sh && \

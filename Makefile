@@ -1,13 +1,7 @@
-# what to tell Ghostscript where it will expect to run from
-
-TARGET_DIR ?= /build/
-
-
-.ONESHELL:
+TARGET_DIR=/build/
 
 ## dev tool istallation
 init:
-
 
 ## GHOSTSCRIPT (https://www.ghostscript.com/)
 ## 10.01.1 - https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10011/ghostscript-10.01.1.tar.gz
