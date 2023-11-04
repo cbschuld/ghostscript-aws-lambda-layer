@@ -1,5 +1,7 @@
 # Ghostscript Layer for AWS Lambda (v10.02.1)
 
+[![Build Layer ZIP](https://github.com/cbschuld/ghostscript-aws-lambda-layer/actions/workflows/docker-workflow.yml/badge.svg)](https://github.com/cbschuld/ghostscript-aws-lambda-layer/actions/workflows/docker-workflow.yml)
+
 Scripts to compile Ghostscript (gs) for AWS Lambda instances powered by Amazon Linux 2.x, for the `python3.7`, `python3.8`, `python3.9`, `python3.10`, `nodejs12.x`, `nodejs14.x`, `nodejs16.x` and the `nodejs18.x` lambda runtime.
 
 ## Description for AWS Serverless Application Repository
