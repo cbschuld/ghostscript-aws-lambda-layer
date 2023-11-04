@@ -1,10 +1,10 @@
-# Ghostscript Layer for AWS Lambda (v10.01.1)
+# Ghostscript Layer for AWS Lambda (v10.02.1)
 
 Scripts to compile Ghostscript (gs) for AWS Lambda instances powered by Amazon Linux 2.x, for the `python3.7`, `python3.8`, `python3.9`, `python3.10`, `nodejs12.x`, `nodejs14.x`, `nodejs16.x` and the `nodejs18.x` lambda runtime.
 
 ## Description for AWS Serverless Application Repository
 
-Static build of Ghostscript 10.01.1 for Amazon Linux 2, packaged as a Lambda layer. Also provides PDF files conversion support using ImageMagick (requires an [ImageMagick layer](https://github.com/cbschuld/imagemagick-aws-lambda-layer)).
+Static build of Ghostscript 10.02.1 for Amazon Linux (via the AWS SAM team), packaged as a Lambda layer. Also provides PDF files conversion support using ImageMagick (requires an [ImageMagick layer](https://github.com/cbschuld/imagemagick-aws-lambda-layer)).
 
 ## Prerequisites
 
@@ -18,10 +18,10 @@ If you want to build this environment yourself, you will need:
 Run the following commands to deploy the Github compiled result as a layer in your AWS account.
 
 ```
-wget https://github.com/cbschuld/ghostscript-aws-lambda-layer/releases/download/10.01.1/ghostscript-layer.zip
+wget https://github.com/cbschuld/ghostscript-aws-lambda-layer/releases/download/10.02.1/ghostscript-layer.zip
 aws lambda publish-layer-version \
-    --layer-name ghostscript-v10-01-1 \
-    --description "Ghostscript 10.01.1" \
+    --layer-name ghostscript-v10-02-1 \
+    --description "Ghostscript 10.02.1" \
     --compatible-runtimes python3.7 python3.8 python3.9 python3.10 nodejs14.x nodejs16.x nodejs18.x \
     --compatible-architectures x86_64 \
     --zip-file fileb://ghostscript-layer.zip
